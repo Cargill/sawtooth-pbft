@@ -326,7 +326,7 @@ The normal mode proceeds as follows:
 
    - The primary node will send a request to its validator to initialize a new
      block. After a configurable timeout (determined by the
-     ``sawtooth.consensus.pbft.block_duration`` setting), the primary will send
+     ``sawtooth.consensus.pbft.block_publishing_delay`` setting), the primary will send
      a request to the validator to finalize the block and broadcast it to the
      network.
 
