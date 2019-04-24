@@ -386,10 +386,10 @@ Sawtooth PBFT does not implement a checkpointing procedure (garbage collection
 of the log). Instead, each node cleans the log periodically during normal
 operation.
 
-Log size is controlled by a configurable setting, as determined by the on-chain
-setting ``sawtooth.consensus.pbft.max_log_size``. When a block is committed,
-each node compares the size of its log against the maximum size. If the log
-exceeds this value, Sawtooth PBFT uses these rules to prune the log:
+Log size is controlled by a configurable setting, as determined by the CLI
+argument ``--max_log_size``. When a block is committed, each node compares the
+size of its log against the maximum size. If the log exceeds this value,
+Sawtooth PBFT uses these rules to prune the log:
 
 - Keep blocks and messages for the sequence number of the block that was just
   committed, plus those for any higher (newer) sequence numbers
